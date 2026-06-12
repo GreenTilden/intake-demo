@@ -53,20 +53,20 @@ I am writing to report what I believe to be ongoing government surveillance
 of my person and property. Since approximately January 2026, I have
 noticed the following:
 
-1. Unmarked vehicles parked outside my residence at 4215 Maple Street,
-   Indianapolis, IN for extended periods (photographs enclosed)
+1. Unmarked vehicles parked outside my residence at 412 Quillhaven Court,
+   Lakemont, IN for extended periods (photographs enclosed)
 2. Unusual interference with my phone calls and internet service
 3. Individuals appearing to follow me to and from work
 
 I have documented these incidents with dates and photographs which I am
-including with this letter. I am requesting the Northwind Legal's assistance in
+including with this letter. I am requesting Northwind Legal Group's assistance in
 investigating whether my civil rights are being violated.
 
 Sincerely,
-Robert J. Williams
-4215 Maple Street
-Indianapolis, IN 46205
-(317) 555-0142`
+Fennimore J. Talbot
+412 Quillhaven Court
+Lakemont, IN 47000
+(555) 555-0173`
     scanning.value = false
     ocrDone.value = true
   }, 2000)

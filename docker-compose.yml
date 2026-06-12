@@ -7,6 +7,10 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-intake-dev}
     volumes:
       - pg-data:/var/lib/postgresql/data
+      # Schema + synthetic seed run in filename order on FIRST init of an empty
+      # data volume: 001_initial_schema.sql then 002_synthetic_seed.sql.
+      # To re-seed from scratch: `docker compose down -v && docker compose up -d`.
+      - ./database/migrations:/docker-entrypoint-initdb.d:ro
     ports:
       - "127.0.0.1:5432:5432"
     restart: unless-stopped
@@ -17,7 +21,7 @@ services:
       - "${PORT:-8910}:8910"
     environment:
       DATABASE_URL: postgresql+asyncpg://intake:${POSTGRES_PASSWORD:-intake-dev}@postgres:5432/intake
-      SECRET_KEY: ${SECRET_KEY:-f696b1cf98787bd420b0752fef2cf67aeff82a11468edc90}
+      SECRET_KEY: ${SECRET_KEY:-change-me-in-production}
       SMTP_HOST: ${SMTP_HOST:-}
       SMTP_PORT: ${SMTP_PORT:-587}
       SMTP_USER: ${SMTP_USER:-}

@@ -4,7 +4,7 @@ DATABASE_URL = os.environ.get(
     "DATABASE_URL",
     "postgresql+asyncpg://intake:intake@localhost:5432/intake",
 )
-SECRET_KEY = os.environ.get("SECRET_KEY", "f696b1cf98787bd420b0752fef2cf67aeff82a11468edc90")
+SECRET_KEY = os.environ.get("SECRET_KEY", "change-me-in-production")
 SMTP_HOST = os.environ.get("SMTP_HOST", "")
 SMTP_PORT = int(os.environ.get("SMTP_PORT", "587"))
 SMTP_USER = os.environ.get("SMTP_USER", "")

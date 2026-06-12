@@ -2,13 +2,13 @@
 import { ref } from 'vue'
 
 const staff = ref([
-  { id: 's1', name: 'Sarah Chen', email: 'sarah.chen@northwind-legal.local', role: 'attorney', areas: ['govt-surveillance', 'privacy'], activeCaseload: 42 },
-  { id: 's2', name: 'Marcus Johnson', email: 'marcus.j@northwind-legal.local', role: 'attorney', areas: ['police-misconduct', 'discrimination'], activeCaseload: 31 },
-  { id: 's3', name: 'Priya Patel', email: 'priya.p@northwind-legal.local', role: 'staff', areas: ['immigration', 'housing'], activeCaseload: 28 },
-  { id: 's4', name: 'James Torres', email: 'james.t@northwind-legal.local', role: 'staff', areas: ['free-speech', 'voting'], activeCaseload: 24 },
-  { id: 's5', name: 'Kim Brooks', email: 'kim.b@northwind-legal.local', role: 'admin', areas: [], activeCaseload: 18 },
-  { id: 's6', name: 'Alex Rivera', email: 'alex.r@northwind-legal.local', role: 'volunteer', areas: ['govt-surveillance'], activeCaseload: 8 },
-  { id: 's7', name: 'Dana Kim', email: 'dana.k@northwind-legal.local', role: 'volunteer', areas: ['police-misconduct'], activeCaseload: 5 },
+  { id: 's1', name: 'Tamsin Vale', email: 'tamsin.vale@northwind-legal.local', role: 'attorney', areas: ['govt-surveillance', 'privacy'], activeCaseload: 42 },
+  { id: 's2', name: 'Desmond Holloway', email: 'desmond.h@northwind-legal.local', role: 'attorney', areas: ['police-misconduct', 'discrimination'], activeCaseload: 31 },
+  { id: 's3', name: 'Oriana Castellanos', email: 'oriana.c@northwind-legal.local', role: 'staff', areas: ['immigration', 'housing'], activeCaseload: 28 },
+  { id: 's4', name: 'Bertram Okonkwo', email: 'bertram.o@northwind-legal.local', role: 'staff', areas: ['free-speech', 'voting'], activeCaseload: 24 },
+  { id: 's5', name: 'Margo Pennington', email: 'margo.p@northwind-legal.local', role: 'admin', areas: [], activeCaseload: 18 },
+  { id: 's6', name: 'Cassius Lindqvist', email: 'cassius.l@northwind-legal.local', role: 'volunteer', areas: ['govt-surveillance'], activeCaseload: 8 },
+  { id: 's7', name: 'Wren Adeyemi', email: 'wren.a@northwind-legal.local', role: 'volunteer', areas: ['police-misconduct'], activeCaseload: 5 },
 ])
 
 const roleColors: Record<string, string> = {

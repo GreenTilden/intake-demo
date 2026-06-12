@@ -1,0 +1,11 @@
+# The repo-root .gitignore excludes *.sql / *.sql.gz to keep DB dumps and
+# pg_dump backups (e.g. the Makefile `backup` target) out of version control.
+#
+# Migration + seed SQL under database/ is SOURCE, not a dump — the clean-room
+# demo's whole value is its committed synthetic corpus. Re-include it here.
+# (Child .gitignore negations override the parent's *.sql rule.)
+!migrations/*.sql
+
+# Keep ignoring compressed dumps / backups even under database/.
+*.sql.gz
+backup-*.sql

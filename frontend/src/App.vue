@@ -27,7 +27,7 @@ import { RouterLink, RouterView } from 'vue-router'
         </RouterLink>
       </nav>
       <div class="sidebar-footer">
-        <a href="https://darntech.com" target="_blank" rel="noopener" class="darntech-mark" aria-label="Built by DArnTech">
+        <a href="https://darn-tech.com" target="_blank" rel="noopener" class="darntech-mark" aria-label="Built by DArnTech">
           <svg viewBox="0 0 800 800" class="darntech-mark-svg" aria-hidden="true">
             <line x1="194" y1="400" x2="655.31" y2="400" stroke="currentColor" stroke-width="40" stroke-linecap="round"/>
             <line x1="400" y1="116" x2="400" y2="684" stroke="currentColor" stroke-width="40" stroke-linecap="round"/>

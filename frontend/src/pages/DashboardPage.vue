@@ -21,7 +21,7 @@ const stats = ref({
     'voting': 112,
     'other': 123,
   },
-  caseloads: { 'Sarah Chen': 42, 'Marcus Johnson': 31, 'Priya Patel': 28, 'James Torres': 24, 'Kim Brooks': 18 },
+  caseloads: { 'Tamsin Vale': 42, 'Desmond Holloway': 31, 'Oriana Castellanos': 28, 'Bertram Okonkwo': 24, 'Margo Pennington': 18 },
 })
 
 const categoryLabels: Record<string, string> = {

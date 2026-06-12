@@ -7,17 +7,17 @@ const route = useRoute()
 // Mock data for demo
 const intake = ref({
   id: route.params.id,
-  firstName: 'Robert',
-  lastName: 'Williams',
-  phone: '(317) 555-0142',
+  firstName: 'Fennimore',
+  lastName: 'Talbot',
+  phone: '(555) 555-0173',
   email: '',
   preferredContact: 'phone',
-  address: '4215 Maple Street, Indianapolis, IN 46205',
+  address: '412 Quillhaven Court, Lakemont, IN 47000',
   state: 'IN',
   source: 'letter',
   category: 'govt-surveillance',
   categoryLabel: 'Government Surveillance / Gangstalking',
-  description: `I am writing to report what I believe to be ongoing government surveillance of my person and property. Since approximately January 2026, I have noticed the following:\n\n1. Unmarked vehicles parked outside my residence at 4215 Maple Street, Indianapolis, IN for extended periods (photographs enclosed)\n2. Unusual interference with my phone calls and internet service\n3. Individuals appearing to follow me to and from work\n\nI have documented these incidents with dates and photographs which I am including with this letter. I am requesting the Northwind Legal's assistance in investigating whether my civil rights are being violated.`,
+  description: `I am writing to report what I believe to be ongoing government surveillance of my person and property. Since approximately January 2026, I have noticed the following:\n\n1. Unmarked vehicles parked outside my residence at 412 Quillhaven Court, Lakemont, IN for extended periods (photographs enclosed)\n2. Unusual interference with my phone calls and internet service\n3. Individuals appearing to follow me to and from work\n\nI have documented these incidents with dates and photographs which I am including with this letter. I am requesting Northwind Legal Group's assistance in investigating whether my civil rights are being violated.`,
   urgency: 'high',
   status: 'new',
   assignedTo: null,
@@ -26,21 +26,21 @@ const intake = ref({
   createdAt: '2026-03-31T09:15:00Z',
   updatedAt: '2026-03-31T09:15:00Z',
   notes: [
-    { id: '1', text: 'Letter received via USPS. Scanned and OCR processed. Text quality good.', author: 'Kim Brooks', createdAt: '2026-03-31T09:20:00Z' },
+    { id: '1', text: 'Letter received via USPS. Scanned and OCR processed. Text quality good.', author: 'Margo Pennington', createdAt: '2026-03-31T09:20:00Z' },
   ],
   attachments: [
-    { id: '1', filename: 'williams_letter_20260331.pdf', sizeBytes: 847293, ocrStatus: 'complete', createdAt: '2026-03-31T09:15:00Z' },
+    { id: '1', filename: 'talbot_letter_20260331.pdf', sizeBytes: 847293, ocrStatus: 'complete', createdAt: '2026-03-31T09:15:00Z' },
     { id: '2', filename: 'photo_vehicle_1.jpg', sizeBytes: 2145000, ocrStatus: 'skipped', createdAt: '2026-03-31T09:16:00Z' },
   ],
 })
 
 const newNote = ref('')
 const staffList = [
-  { id: 's1', name: 'Sarah Chen' },
-  { id: 's2', name: 'Marcus Johnson' },
-  { id: 's3', name: 'Priya Patel' },
-  { id: 's4', name: 'James Torres' },
-  { id: 's5', name: 'Kim Brooks' },
+  { id: 's1', name: 'Tamsin Vale' },
+  { id: 's2', name: 'Desmond Holloway' },
+  { id: 's3', name: 'Oriana Castellanos' },
+  { id: 's4', name: 'Bertram Okonkwo' },
+  { id: 's5', name: 'Margo Pennington' },
 ]
 
 function addNote() {
