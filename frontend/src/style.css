@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Carbon Gray-100 dark scale */
+  --bg:       #161616;
+  --bg-2:     #262626;
+  --bg-3:     #393939;
+  --bg-4:     #525252;
+
+  --fg:       #f4f4f4;
+  --fg-2:     #c6c6c6;
+  --fg-3:     #8d8d8d;
+
+  /* Semantic — Carbon palette mapped to Northwind Legal lit-support intent */
+  --navy:        #4589ff;
+  --navy-mid:    #78a9ff;
+  --sky:         #82cfff;
+  --accent:      #fa4d56;
+  --green:       #42be65;
+  --green-light: #6fdc8c;
+  --gold:        #f1c21b;
+  --paper:       #262626;
+  --border:      #393939;
+  --text:           var(--fg);
+  --text-secondary: var(--fg-2);
+  --text-muted:     var(--fg-3);
+
+  /* DArnTech brand — used in the "Built by" footer mark */
+  --darntech-olive:       #a5a570; /* olive-light: legible on dark sidebar */
+  --darntech-olive-dark:  #747438;
+  --darntech-yellow:      #F5DC28;
+
+  --radius: 2px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--navy-mid); text-decoration: none; }
+a:hover { color: var(--sky); text-decoration: underline; }
+
+.app-shell { display: flex; min-height: 100vh; }
+
+.sidebar {
+  width: 220px;
+  background: var(--bg-2);
+  color: var(--fg);
+  padding: 1.5rem 0;
+  flex-shrink: 0;
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  overflow-y: auto;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-brand {
+  padding: 0 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+.sidebar-brand h1 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--fg);
+}
+.sidebar-brand p {
+  font-size: 0.7rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-top: 0.15rem;
+}
+
+.sidebar nav { display: flex; flex-direction: column; gap: 1px; }
+.sidebar nav a {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.65rem 1.25rem;
+  color: var(--fg-2);
+  font-size: 0.85rem;
+  font-weight: 400;
+  transition: background 0.1s, color 0.1s;
+  text-decoration: none;
+  border-left: 2px solid transparent;
+}
+.sidebar nav a:hover { background: var(--bg-3); color: var(--fg); text-decoration: none; }
+.sidebar nav a.router-link-active {
+  background: var(--bg-3);
+  color: var(--fg);
+  border-left-color: var(--navy);
+  font-weight: 500;
+}
+.nav-icon { width: 18px; text-align: center; font-size: 0.95rem; color: var(--fg-3); }
+.sidebar nav a.router-link-active .nav-icon { color: var(--navy); }
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 1rem 1.25rem 0.5rem;
+  border-top: 1px solid var(--border);
+}
+.darntech-mark {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--darntech-olive);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  transition: color 0.1s;
+}
+.darntech-mark:hover { color: var(--darntech-yellow); text-decoration: none; }
+.darntech-mark-svg { width: 22px; height: 22px; flex-shrink: 0; }
+.darntech-mark-text { display: flex; flex-direction: column; line-height: 1.1; }
+.darntech-mark-built {
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  font-weight: 500;
+}
+.darntech-mark-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: inherit;
+}
+.sidebar-footer-note {
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  margin-top: 0.6rem;
+  font-weight: 500;
+}
+
+.main-content { margin-left: 220px; flex: 1; padding: 2rem; max-width: 1280px; }
+
+.page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.75rem; }
+.page-header h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--fg);
+  letter-spacing: 0.005em;
+}
+
+.card {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+.card + .card { margin-top: 1rem; }
+.card-header {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg-3);
+  margin-bottom: 0.85rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1px;
+  margin-bottom: 1.75rem;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.stat-card {
+  background: var(--bg-2);
+  padding: 1.25rem 1.4rem;
+  text-align: left;
+}
+.stat-card .stat-value {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--fg);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+.stat-card .stat-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg-3);
+}
+.stat-card.accent .stat-value { color: var(--accent); }
+.stat-card.green  .stat-value { color: var(--green); }
+
+table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+thead th {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--fg-3);
+  text-align: left;
+  padding: 0.7rem 0.85rem;
+  background: var(--bg-2);
+  border-bottom: 1px solid var(--border);
+}
+tbody td {
+  padding: 0.7rem 0.85rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+  background: var(--bg-2);
+  color: var(--fg-2);
+}
+tbody td a { color: var(--sky); }
+tbody tr:hover td { background: var(--bg-3); }
+
+.badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+}
+.badge-new        { background: #570408; color: #ffb3b8; }
+.badge-reviewed   { background: #483700; color: #fdd13a; }
+.badge-assigned   { background: #002d9c; color: #a6c8ff; }
+.badge-in_progress{ background: #044317; color: #6fdc8c; }
+.badge-resolved,
+.badge-closed     { background: #393939; color: #c6c6c6; }
+.badge-low        { background: #393939; color: #c6c6c6; }
+.badge-normal     { background: #002d9c; color: #a6c8ff; }
+.badge-high       { background: #483700; color: #fdd13a; }
+.badge-critical   { background: #570408; color: #ffb3b8; }
+.badge-letter     { background: #491d8b; color: #d4bbff; }
+.badge-web        { background: #044317; color: #6fdc8c; }
+.badge-email      { background: #002d9c; color: #a6c8ff; }
+.badge-phone      { background: #483700; color: #fdd13a; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.1s, border-color 0.1s;
+  text-decoration: none;
+  font-family: inherit;
+}
+.btn-primary { background: var(--navy); color: #ffffff; }
+.btn-primary:hover { background: var(--navy-mid); }
+.btn-accent { background: var(--accent); color: #ffffff; }
+.btn-accent:hover { background: #ff8389; }
+.btn-outline { background: transparent; color: var(--fg); border-color: var(--fg-3); }
+.btn-outline:hover { background: var(--bg-3); border-color: var(--fg-2); }
+.btn-sm { padding: 0.32rem 0.7rem; font-size: 0.78rem; }
+
+.form-group { margin-bottom: 1rem; }
+.form-group label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--fg-2);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.01em;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-2);
+  color: var(--fg);
+  font-family: inherit;
+  transition: border-color 0.1s, background 0.1s;
+}
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover { background: var(--bg-3); }
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 0.85rem;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--navy);
+  box-shadow: inset 0 0 0 1px var(--navy);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+.drop-zone {
+  border: 1px dashed var(--fg-3);
+  border-radius: var(--radius);
+  padding: 3rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  background: var(--bg-2);
+}
+.drop-zone:hover,
+.drop-zone.dragover {
+  border-color: var(--navy);
+  background: var(--bg-3);
+}
+.drop-zone .drop-icon { font-size: 2.4rem; margin-bottom: 0.7rem; color: var(--fg-3); }
+.drop-zone p { color: var(--fg-2); font-size: 0.9rem; }
+.drop-zone .drop-hint { font-size: 0.75rem; color: var(--fg-3); margin-top: 0.35rem; }
+
+.ocr-result {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-top: 1rem;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+  max-height: 400px;
+  overflow-y: auto;
+  line-height: 1.55;
+  color: var(--fg-2);
+}
+
+.spinner {
+  display: inline-block;
+  width: 20px; height: 20px;
+  border: 2px solid var(--border);
+  border-top-color: var(--navy);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.empty-state { text-align: center; padding: 3rem; color: var(--fg-3); }
+.empty-state .empty-icon { font-size: 2.4rem; margin-bottom: 0.75rem; opacity: 0.6; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--bg-3); }
+::-webkit-scrollbar-thumb:hover { background: var(--bg-4); }
+
+@media (max-width: 768px) {
+  .sidebar { display: none; }
+  .main-content { margin-left: 0; padding: 1.25rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+}
