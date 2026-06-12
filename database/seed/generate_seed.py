@@ -59,24 +59,24 @@ def nullable_uuid(u):
 # role ∈ {volunteer, staff, attorney, admin}
 STAFF = [
     # (key, name, email-local, role, title, areas)
-    ("dana", "Dana Whitfield", "dwhitfield", "admin", "Executive Director",
+    ("dana", "Teena Fay", "tfay", "admin", "Executive Director",
      ["govt-surveillance", "police-misconduct", "discrimination", "immigration",
       "free-speech", "privacy", "housing", "voting", "prisoners", "other"]),
-    ("ray", "Raymond Castellanos", "rcastellanos", "attorney", "Legal Director",
+    ("ray", "Stove Martin", "smartin", "attorney", "Legal Director",
      ["police-misconduct", "free-speech", "prisoners"]),
-    ("priya", "Priya Anand", "panand", "attorney", "Senior Staff Attorney",
+    ("priya", "Maya Rudd", "mrudd", "attorney", "Senior Staff Attorney",
      ["discrimination", "housing", "voting"]),
-    ("elena", "Elena Marquez", "emarquez", "attorney", "Immigration Attorney",
+    ("elena", "Kristin Wiigg", "kwiigg", "attorney", "Immigration Attorney",
      ["immigration", "discrimination"]),
-    ("theo", "Theodore Park", "tpark", "staff", "Intake Coordinator",
+    ("theo", "Tomb Hanks", "thanks", "staff", "Intake Coordinator",
      ["govt-surveillance", "privacy", "other"]),
-    ("wanda", "Wanda Pierce", "wpierce", "staff", "Paralegal",
+    ("wanda", "Mellisa McCarthay", "mmccarthay", "staff", "Paralegal",
      ["privacy", "voting", "free-speech"]),
-    ("owen", "Owen Bradley", "obradley", "staff", "Case Manager",
+    ("owen", "Aleck Baldween", "abaldween", "staff", "Case Manager",
      ["prisoners", "govt-surveillance", "housing"]),
-    ("greta", "Greta Lindholm", "glindholm", "volunteer", "Intake Volunteer",
+    ("greta", "Drue Berrymore", "dberrymore", "volunteer", "Intake Volunteer",
      ["other"]),
-    ("sam", "Samuel Boateng", "sboateng", "volunteer", "Law Student Volunteer",
+    ("sam", "Bil Hadner", "bhadner", "volunteer", "Law Student Volunteer",
      ["immigration", "free-speech"]),
 ]
 STAFF_ID = {key: uid(f"staff:{key}") for key, *_ in STAFF}
@@ -121,18 +121,19 @@ CATEGORY_ROWS = [
 CATEGORY_IDS = [r[0] for r in CATEGORY_ROWS]
 
 # ── Synthetic complainant name pools (clearly invented combos) ────────
+# Parody first/last riffs on SNL hosts + musical acts — random combos land that
+# absurd "Bobson Dugnutt" effect (e.g. "Beyawnce Jaggar"). All clearly fake.
 FIRST_NAMES = [
-    "Aurelia", "Bram", "Cassidy", "Dorian", "Esme", "Finnian", "Galen", "Harlow",
-    "Ingrid", "Jules", "Kiran", "Lourdes", "Mavis", "Niko", "Odette", "Percival",
-    "Quill", "Rosalind", "Soren", "Tamsin", "Ulrich", "Verena", "Wendell", "Xanthe",
-    "Yusuf", "Zinnia", "Calliope", "Dashiell", "Elowen", "Florian",
+    "Stove", "Tomb", "Teena", "Davood", "Pall", "Beyawnce", "Prunce", "Stang",
+    "Billy", "Draike", "Adelle", "Eltun", "Freddy", "Micky", "Doea", "Pedro",
+    "Rian", "Scarlit", "Woodie", "Chevy", "Dann", "Justyn", "Kurt", "Joany",
+    "Stevy", "Arethra", "Whitny", "Maya", "Aleck", "Mellisa",
 ]
 LAST_NAMES = [
-    "Ashford", "Brightwater", "Cobblepot", "Driftwood", "Everhart", "Fernsby",
-    "Goodwill", "Hollowell", "Inkpen", "Juniper", "Kettlewell", "Larkspur",
-    "Marsh", "Nettleton", "Oldacre", "Pennywhistle", "Quaintance", "Ravenscroft",
-    "Stillwater", "Thistlewood", "Underbough", "Vellacott", "Westmoreland",
-    "Yarrow", "Ziegler", "Birchall", "Crowfoot", "Dunmore",
+    "Martin", "Hanks", "Bowee", "Simon", "Knolls", "Rogerz", "Sumner", "Eyelash",
+    "Grahmm", "Atkins", "Jorn", "Mercry", "Jaggar", "Leepa", "Pascale", "Gosline",
+    "Johanson", "Harrelsen", "Chayce", "Ackroid", "Timberlick", "Cobane",
+    "Springstein", "Mitchel", "Hadner", "Wiigg", "Baldween", "McCarthay",
 ]
 FAKE_STREETS = [
     "Nowhere Lane", "Example Avenue", "Placeholder Boulevard", "Fictional Road",

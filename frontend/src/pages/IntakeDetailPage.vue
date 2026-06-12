@@ -7,8 +7,8 @@ const route = useRoute()
 // Mock data for demo
 const intake = ref({
   id: route.params.id,
-  firstName: 'Fennimore',
-  lastName: 'Talbot',
+  firstName: 'Davood',
+  lastName: 'Bowee',
   phone: '(555) 555-0173',
   email: '',
   preferredContact: 'phone',
@@ -26,7 +26,7 @@ const intake = ref({
   createdAt: '2026-03-31T09:15:00Z',
   updatedAt: '2026-03-31T09:15:00Z',
   notes: [
-    { id: '1', text: 'Letter received via USPS. Scanned and OCR processed. Text quality good.', author: 'Margo Pennington', createdAt: '2026-03-31T09:20:00Z' },
+    { id: '1', text: 'Letter received via USPS. Scanned and OCR processed. Text quality good.', author: 'Mellisa McCarthay', createdAt: '2026-03-31T09:20:00Z' },
   ],
   attachments: [
     { id: '1', filename: 'talbot_letter_20260331.pdf', sizeBytes: 847293, ocrStatus: 'complete', createdAt: '2026-03-31T09:15:00Z' },
@@ -36,11 +36,11 @@ const intake = ref({
 
 const newNote = ref('')
 const staffList = [
-  { id: 's1', name: 'Tamsin Vale' },
-  { id: 's2', name: 'Desmond Holloway' },
-  { id: 's3', name: 'Oriana Castellanos' },
-  { id: 's4', name: 'Bertram Okonkwo' },
-  { id: 's5', name: 'Margo Pennington' },
+  { id: 's1', name: 'Teena Fay' },
+  { id: 's2', name: 'Stove Martin' },
+  { id: 's3', name: 'Maya Rudd' },
+  { id: 's4', name: 'Aleck Baldween' },
+  { id: 's5', name: 'Mellisa McCarthay' },
 ]
 
 function addNote() {

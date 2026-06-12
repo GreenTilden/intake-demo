@@ -6,14 +6,14 @@ const filter = ref({ status: '', category: '', source: '', search: '' })
 
 // Mock data for demo
 const intakes = ref([
-  { id: '1', firstName: 'Fennimore', lastName: 'Talbot', source: 'letter', category: 'govt-surveillance', categoryLabel: 'Govt Surveillance', status: 'new', urgency: 'high', assignedName: null, createdAt: '2026-03-31T09:15:00Z' },
-  { id: '2', firstName: 'Delphine', lastName: 'Marchetti', source: 'web', category: 'police-misconduct', categoryLabel: 'Police Misconduct', status: 'assigned', urgency: 'critical', assignedName: 'Tamsin Vale', createdAt: '2026-03-30T14:22:00Z' },
-  { id: '3', firstName: 'Horace', lastName: 'Dunmore', source: 'letter', category: 'govt-surveillance', categoryLabel: 'Govt Surveillance', status: 'reviewed', urgency: 'normal', assignedName: null, createdAt: '2026-03-30T11:05:00Z' },
-  { id: '4', firstName: 'Saoirse', lastName: 'Brennan', source: 'email', category: 'privacy', categoryLabel: 'Privacy / Data', status: 'in_progress', urgency: 'normal', assignedName: 'Desmond Holloway', createdAt: '2026-03-29T16:45:00Z' },
-  { id: '5', firstName: 'Ignatius', lastName: 'Fairweather', source: 'phone', category: 'discrimination', categoryLabel: 'Discrimination', status: 'assigned', urgency: 'high', assignedName: 'Oriana Castellanos', createdAt: '2026-03-29T10:30:00Z' },
-  { id: '6', firstName: 'Cordelia', lastName: 'Wycombe', source: 'letter', category: 'free-speech', categoryLabel: 'Free Speech', status: 'new', urgency: 'normal', assignedName: null, createdAt: '2026-03-28T15:00:00Z' },
-  { id: '7', firstName: 'Lucian', lastName: 'Pemberton', source: 'web', category: 'govt-surveillance', categoryLabel: 'Govt Surveillance', status: 'resolved', urgency: 'low', assignedName: 'Bertram Okonkwo', createdAt: '2026-03-27T09:00:00Z' },
-  { id: '8', firstName: 'Beatrix', lastName: 'Hollings', source: 'letter', category: 'housing', categoryLabel: 'Housing', status: 'new', urgency: 'high', assignedName: null, createdAt: '2026-03-27T08:20:00Z' },
+  { id: '1', firstName: 'Davood', lastName: 'Bowee', source: 'letter', category: 'govt-surveillance', categoryLabel: 'Govt Surveillance', status: 'new', urgency: 'high', assignedName: null, createdAt: '2026-03-31T09:15:00Z' },
+  { id: '2', firstName: 'Adelle', lastName: 'Atkins', source: 'web', category: 'police-misconduct', categoryLabel: 'Police Misconduct', status: 'assigned', urgency: 'critical', assignedName: 'Teena Fay', createdAt: '2026-03-30T14:22:00Z' },
+  { id: '3', firstName: 'Eltun', lastName: 'Jorn', source: 'letter', category: 'govt-surveillance', categoryLabel: 'Govt Surveillance', status: 'reviewed', urgency: 'normal', assignedName: null, createdAt: '2026-03-30T11:05:00Z' },
+  { id: '4', firstName: 'Doea', lastName: 'Leepa', source: 'email', category: 'privacy', categoryLabel: 'Privacy / Data', status: 'in_progress', urgency: 'normal', assignedName: 'Stove Martin', createdAt: '2026-03-29T16:45:00Z' },
+  { id: '5', firstName: 'Freddy', lastName: 'Mercry', source: 'phone', category: 'discrimination', categoryLabel: 'Discrimination', status: 'assigned', urgency: 'high', assignedName: 'Maya Rudd', createdAt: '2026-03-29T10:30:00Z' },
+  { id: '6', firstName: 'Beyawnce', lastName: 'Knolls', source: 'letter', category: 'free-speech', categoryLabel: 'Free Speech', status: 'new', urgency: 'normal', assignedName: null, createdAt: '2026-03-28T15:00:00Z' },
+  { id: '7', firstName: 'Mick', lastName: 'Jaggar', source: 'web', category: 'govt-surveillance', categoryLabel: 'Govt Surveillance', status: 'resolved', urgency: 'low', assignedName: 'Aleck Baldween', createdAt: '2026-03-27T09:00:00Z' },
+  { id: '8', firstName: 'Whitny', lastName: 'Hewston', source: 'letter', category: 'housing', categoryLabel: 'Housing', status: 'new', urgency: 'high', assignedName: null, createdAt: '2026-03-27T08:20:00Z' },
 ])
 
 function fmtDate(iso: string) {
