@@ -33,11 +33,7 @@ onMounted(() => {
 <template>
   <div v-if="!verified" class="ts-gate">
     <div class="ts-card">
-      <svg viewBox="0 0 800 800" class="ts-mark" aria-hidden="true">
-        <line x1="194" y1="400" x2="655.31" y2="400" stroke="#1f6feb" stroke-width="46" stroke-linecap="round"/>
-        <line x1="400" y1="116" x2="400" y2="684" stroke="#1f6feb" stroke-width="46" stroke-linecap="round"/>
-        <line x1="400" y1="116" x2="131.17" y2="486.61" stroke="#1f6feb" stroke-width="46" stroke-linecap="round"/>
-      </svg>
+      <img src="/favicon.svg" class="ts-mark" alt="DArnTech" />
       <h2>Northwind Legal — Intake</h2>
       <p class="ts-sub">Quick check before you come in.</p>
       <div class="cf-turnstile"></div>
@@ -97,19 +93,22 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: auto;            /* scroll, never clip the card */
+  padding: 24px;
   background: radial-gradient(120% 90% at 50% -10%, #1b2430 0%, #0e141b 60%);
   z-index: 9999;
 }
 .ts-card {
   background: #fff;
   border-radius: 16px;
-  padding: 36px 40px;
+  padding: 32px 28px;
   text-align: center;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
-  max-width: 380px;
-  width: 90%;
+  width: 100%;
+  max-width: 400px;          /* roomy enough for the 300px Turnstile widget */
+  margin: auto;
 }
-.ts-mark { width: 42px; height: 42px; margin-bottom: 10px; }
+.ts-mark { width: 46px; height: 46px; margin-bottom: 12px; }
 .ts-card h2 { margin: 0 0 4px; font-size: 20px; color: #1a2230; }
 .ts-sub { margin: 0 0 20px; color: #5b6472; font-size: 14px; }
 .ts-card .cf-turnstile { display: flex; justify-content: center; min-height: 65px; }
